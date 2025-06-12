@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const images = [
-    "https://raw.githubusercontent.com/obrenoluiz/syntesol/refs/heads/main/public/banner1.png",
+    "/banner1.png", // Caminho correto para imagem local dentro da pasta /public
 ];
 
 function Banner() {
@@ -21,9 +21,8 @@ function Banner() {
             <Image
                 src={images[currentImageIndex]}
                 alt="Banner"
-                layout="fill"
-                objectFit="cover"
-                className="rounded-lg"
+                fill
+                className="object-cover rounded-lg"
             />
         </div>
     );
